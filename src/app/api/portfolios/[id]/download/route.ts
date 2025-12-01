@@ -60,7 +60,7 @@ export async function GET(
 			compressionOptions: { level: 6 },
 		});
 
-		return new NextResponse(zipBuffer, {
+return new NextResponse(new Uint8Array(zipBuffer), {
 			headers: {
 				"Content-Type": "application/zip",
 				"Content-Disposition": `attachment; filename=portfolio-${id}.zip`,
